@@ -7,8 +7,8 @@ import {WizardComponent} from './wizards/wizard/wizard.component';
 const routes: Routes = [
   {path: '', redirectTo: '/wizards', pathMatch: 'full'},
   {path: 'wizards', component: WizardsComponent},
-  {path: 'wizards/:wizard', component: WizardComponent},
-];
+  {path: 'wizards/:wizard', component: WizardComponent}
+  ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
