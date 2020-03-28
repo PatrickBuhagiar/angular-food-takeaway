@@ -8,6 +8,12 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { WizardsComponent } from './wizards/wizards.component';
 import { WizardComponent } from './wizards/wizard/wizard.component';
 import { GoBackComponent } from './layout/go-back/go-back.component';
+import { OrderSelectionComponent } from './pages/order-selection/order-selection.component';
+import { OrderOutInfoComponent } from './pages/order-out-info/order-out-info.component';
+import { OrderInInfoComponent } from './pages/order-in-info/order-in-info.component';
+import { ConfirmComponent } from './pages/confirm/confirm.component';
+import { SummaryComponent } from './pages/summary/summary.component';
+import { PaymentDetailsComponent } from './pages/payment-details/payment-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +22,13 @@ import { GoBackComponent } from './layout/go-back/go-back.component';
     FooterComponent,
     WizardsComponent,
     WizardComponent,
-    GoBackComponent
+    GoBackComponent,
+    OrderSelectionComponent,
+    OrderOutInfoComponent,
+    OrderInInfoComponent,
+    ConfirmComponent,
+    SummaryComponent,
+    PaymentDetailsComponent
   ],
   imports: [
     BrowserModule,
