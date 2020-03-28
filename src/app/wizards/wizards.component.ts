@@ -13,13 +13,45 @@ export class WizardsComponent implements OnInit {
   constructor() {
   }
 
+
   ngOnInit(): void {
+    const deliveryDescription = 'This wizard covers a typical scenario for ordering delivery:';
+    const deliveryDescriptionFlow = [
+      'Select Order ',
+      'Contact details, address ',
+      'Payment details',
+      'Summary',
+      'Confirm'
+    ];
+
+    const collectDescription = 'This wizard covers a typical scenario for ordering takeout:';
+    const collectDescriptionFlow = [
+      'Select Order ',
+      'Contact details ',
+      'Summary',
+      'Confirm'
+    ];
+
+    const bookDescription = 'This wizard covers a typical scenario for booking a table:';
+    const bookDescriptionFlow = [
+      'Contact details, number of people ',
+      'Summary',
+      'Confirm'
+    ];
+
+    const prebookDescription = 'This wizard covers a typical scenario booking a table and pre-ordering food:';
+    const prebookDescriptionFlow = [
+      'Contact details, number of people ',
+      'Select order',
+      'Summary',
+      'Confirm'
+    ];
+
     this.wizards = [
-      new Wizard('Example 1', 'This is the first example', 'example1'),
-      new Wizard('Example 2', 'This is the second example', 'example2'),
-      new Wizard('Example 3', 'This is the third example', 'example3'),
-      new Wizard('Example 4', 'This is the fourth example', 'example4'),
-      new Wizard('Example 5', 'This is the fifth example', 'example5')
+      new Wizard('Delivery', deliveryDescription, deliveryDescriptionFlow, 'delivery'),
+      new Wizard('Collect', collectDescription, collectDescriptionFlow, 'collect'),
+      new Wizard('Book a Table', bookDescription, bookDescriptionFlow, 'book'),
+      new Wizard('Book a Table & Food', prebookDescription, prebookDescriptionFlow, 'book-food')
     ];
   }
 
