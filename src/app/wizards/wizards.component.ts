@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Wizard} from '../types/wizard.model';
+import {Wizard} from '../models/wizard.model';
 
 @Component({
   selector: 'app-wizards',
