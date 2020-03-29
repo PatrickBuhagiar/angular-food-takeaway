@@ -1,11 +1,13 @@
 import {Details} from './details.model';
 
-export class BookingDetail implements Details {
-  firstName: string;
-  lastName: string;
-  mobileNumber: string;
-
+export class BookingDetails extends Details {
   date: string;
   numberOfPeople: number;
+
+  constructor(firstName: string, lastName: string, mobileNumber: string, date: string, numberOfPeople: number) {
+    super(firstName, lastName, mobileNumber);
+    this.date = date;
+    this.numberOfPeople = numberOfPeople;
+  }
 }
 
