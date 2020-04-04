@@ -17,7 +17,7 @@ module.exports = function (config) {
     },
     coverageIstanbulReporter: {
       dir: require('path').join(__dirname, './coverage/wizard-page-flow'),
-      reports: ['html', 'lcovonly', 'text-summary'],
+      reports: ['html', 'lcovonly', 'text-end'],
       fixWebpackSourcePaths: true
     },
     reporters: ['progress', 'kjhtml'],

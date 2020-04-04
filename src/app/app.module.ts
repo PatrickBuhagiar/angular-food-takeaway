@@ -12,7 +12,7 @@ import { OrderSelectionComponent } from './pages/order-selection/order-selection
 import { OrderOutInfoComponent } from './pages/order-out-info/order-out-info.component';
 import { OrderInInfoComponent } from './pages/order-in-info/order-in-info.component';
 import { ConfirmComponent } from './pages/confirm/confirm.component';
-import { SummaryComponent } from './pages/summary/summary.component';
+import { EndComponent } from './pages/end/end.component';
 import { PaymentDetailsComponent } from './pages/payment-details/payment-details.component';
 
 @NgModule({
@@ -27,7 +27,7 @@ import { PaymentDetailsComponent } from './pages/payment-details/payment-details
     OrderOutInfoComponent,
     OrderInInfoComponent,
     ConfirmComponent,
-    SummaryComponent,
+    EndComponent,
     PaymentDetailsComponent
   ],
   imports: [
