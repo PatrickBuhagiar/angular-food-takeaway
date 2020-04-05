@@ -14,6 +14,7 @@ import { OrderInInfoComponent } from './pages/order-in-info/order-in-info.compon
 import { ConfirmComponent } from './pages/confirm/confirm.component';
 import { EndComponent } from './pages/end/end.component';
 import { PaymentDetailsComponent } from './pages/payment-details/payment-details.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { PaymentDetailsComponent } from './pages/payment-details/payment-details
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

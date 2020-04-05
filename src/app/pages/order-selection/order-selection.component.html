@@ -4,23 +4,34 @@
   <div class="nhsuk-table-responsive">
     <table class="nhsuk-table">
       <thead class="nhsuk-table__head">
-        <tr class="nhsuk-table__row">
-          <th class="nhsuk-table__header" scope="col">Pick</th>
-          <th class="nhsuk-table__header" scope="col">Item</th>
-          <th class="nhsuk-table__header" scope="col">Description</th>
-          <th class="nhsuk-table__header" scope="col">Dietary</th>
-          <th class="nhsuk-table__header" scope="col">Price</th>
-        </tr>
+      <tr class="nhsuk-table__row">
+        <th class="nhsuk-table__header" scope="col">Pick</th>
+        <th class="nhsuk-table__header" scope="col">Item</th>
+        <th class="nhsuk-table__header" scope="col">Description</th>
+        <th class="nhsuk-table__header" scope="col">Dietary</th>
+        <th class="nhsuk-table__header" scope="col">Price</th>
+      </tr>
       </thead>
       <tbody class="nhsuk-table__body">
-        <tr class="nhsuk-table__row" *ngFor="let item of menu.items; index as i">
-          <td class="nhsuk-table__cell"><input [id]="i" name="checkbox{{i}}" value="{{false}}" type="checkbox"/></td>
-          <td class="nhsuk-table__cell">{{item.itemName}}</td>
-          <td class="nhsuk-table__cell">{{item.description}}</td>
-          <td class="nhsuk-table__cell">{{item.dietaryRequirements.sort().toString()}}</td>
-          <td class="nhsuk-table__cell">£ {{item.unitPrice}}</td>
-        </tr>
+      <tr class="nhsuk-table__row" *ngFor="let item of menu.items; index as i">
+        <td class="nhsuk-table__cell">
+          <input class="nhsuk-input--width-2"
+                 id="quantity-{{i}}"
+                 name="quantity-{{i}}"
+                 value="{{false}}"
+                 type="number"
+                 min="0"
+                 [ngModel]="getQuantity(i, item)"
+                 (change)="updateOrder(i, item, $event)"/>
+        </td>
+        <td class="nhsuk-table__cell">{{item.itemName}}</td>
+        <td class="nhsuk-table__cell">{{item.description}}</td>
+        <td class="nhsuk-table__cell">{{item.dietaryRequirements.sort().toString()}}</td>
+        <td class="nhsuk-table__cell">£ {{item.unitPrice}}</td>
+      </tr>
       </tbody>
     </table>
   </div>
 </div>
+<button class="nhsuk-button">Next</button>
+
