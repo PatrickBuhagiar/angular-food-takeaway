@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {OrderDetails} from '../../models/order.details.model';
 
 @Component({
   selector: 'app-order-out-info',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderOutInfoComponent implements OnInit {
 
-  constructor() { }
+  @Input() orderDetails: OrderDetails;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
-
 }

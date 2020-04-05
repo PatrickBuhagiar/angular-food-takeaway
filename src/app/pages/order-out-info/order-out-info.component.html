@@ -1,1 +1,45 @@
-<p>order-out-info works!</p>
+<fieldset class="nhsuk-fieldset">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+    <h1 class="nhsuk-fieldset__heading">
+      Order Details
+    </h1>
+  </legend>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="first-name">First Name</label>
+    <input class="nhsuk-input nhsuk-input--width-10"
+           id="first-name"
+           name="first-name"
+           type="text"
+           [(ngModel)]="orderDetails.firstName">
+  </div>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="last-name">Last Name</label>
+    <input class="nhsuk-input nhsuk-input--width-10"
+           id="last-name"
+           name="last-name"
+           type="text"
+           [(ngModel)]="orderDetails.lastName">
+  </div>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="mobile-number">Mobile Number</label>
+    <input class="nhsuk-input nhsuk-input--width-10"
+           id="mobile-number"
+           name="mobile-number"
+           type="tel"
+           [(ngModel)]="orderDetails.mobileNumber">
+  </div>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="address">Address</label>
+    <input class="nhsuk-input"
+           id="address"
+           name="address"
+           type="text"
+           [(ngModel)]="orderDetails.address">
+  </div>
+
+</fieldset>
+<button class="nhsuk-button">Next</button>
