@@ -2,7 +2,6 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Menu} from '../../models/menu.model';
 import {MenuItem} from '../../models/menu.item.model';
 import {OrderItem} from '../../models/order.item.model';
-import * as _ from 'lodash';
 
 @Component({
   selector: 'app-order-selection',

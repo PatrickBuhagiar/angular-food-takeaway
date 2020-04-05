@@ -1,1 +1,56 @@
-<p>payment-details works!</p>
+<fieldset class="nhsuk-fieldset">
+  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+    <h1 class="nhsuk-fieldset__heading">
+      Payment Details
+    </h1>
+  </legend>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="card-number">Card Number</label>
+    <input class="nhsuk-input nhsuk-input--width-10"
+           id="card-number" name="card-number"
+           type="number"
+           inputmode="numeric"
+           pattern="[0-9\s]{13,19}"
+           autocomplete="cc-number"
+           maxlength="19"
+           placeholder="xxxx xxxx xxxx xxxx"
+           [(ngModel)]="paymentDetails.cardNumber">
+  </div>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="expiry-date">
+      Expiry Date
+    </label>
+    <input class="nhsuk-input nhsuk-input--width-5 nhsuk-u-width-two-thirds"
+           id="expiry-date"
+           pattern="[0-9\s]{2}\/[0-9\s]{2}"
+           name="expiry-date"
+           type="tel"
+           [(ngModel)]="paymentDetails.expiryDate">
+  </div>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="cvv">
+      CVV
+    </label>
+    <input class="nhsuk-input nhsuk-input--width-4 nhsuk-u-width-two-thirds"
+           id="cvv"
+           name="address-county"
+           maxlength="4"
+           type="number"
+           [(ngModel)]="paymentDetails.cvv">
+  </div>
+
+  <div class="nhsuk-form-group">
+    <label class="nhsuk-label" for="name-on-card">
+      Name on Card
+    </label>
+    <input class="nhsuk-input nhsuk-input--width-10"
+           id="name-on-card"
+           name="address-postcode"
+           type="text"
+           [(ngModel)]="paymentDetails.nameOnCard">
+  </div>
+</fieldset>
+<button class="nhsuk-button">Next</button>
