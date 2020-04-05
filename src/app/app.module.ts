@@ -10,7 +10,7 @@ import { WizardComponent } from './wizards/wizard/wizard.component';
 import { GoBackComponent } from './layout/go-back/go-back.component';
 import { OrderSelectionComponent } from './pages/order-selection/order-selection.component';
 import { OrderOutInfoComponent } from './pages/order-out-info/order-out-info.component';
-import { BookingInfoComponent } from './pages/order-in-info/booking-info.component';
+import { BookingInfoComponent } from './pages/booking-info/booking-info.component';
 import { ConfirmComponent } from './pages/confirm/confirm.component';
 import { EndComponent } from './pages/end/end.component';
 import { PaymentDetailsComponent } from './pages/payment-details/payment-details.component';
