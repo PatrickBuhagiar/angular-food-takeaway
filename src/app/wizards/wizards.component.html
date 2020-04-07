@@ -9,6 +9,7 @@
           <ol>
             <li *ngFor="let step of wizard.descriptionFlow">{{step}}</li>
           </ol>
+          <a [routerLink]="wizard.url + '/wizardless'">wizardless</a>
         </div>
       </div>
     </div>

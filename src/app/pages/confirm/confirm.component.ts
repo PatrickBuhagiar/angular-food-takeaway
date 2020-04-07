@@ -27,7 +27,7 @@ export class ConfirmComponent implements OnInit {
   }
 
   getAddress() {
-    return (this.request as Order).details.address;
+    return (this.request as Order).details.address || null;
   }
 
   getPaymentDetails() {

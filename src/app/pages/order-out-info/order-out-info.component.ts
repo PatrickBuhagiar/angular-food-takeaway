@@ -9,6 +9,7 @@ import {OrderDetails} from '../../models/order.details.model';
 export class OrderOutInfoComponent implements OnInit {
 
   @Input() orderDetails: OrderDetails;
+  @Input() collect: boolean;
 
   constructor() {
   }

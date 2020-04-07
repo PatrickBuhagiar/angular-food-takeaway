@@ -8,7 +8,7 @@
     <dt class="nhsuk-summary-list__key">Mobile Number</dt>
     <dd class="nhsuk-summary-list__value">{{request.details.mobileNumber}}</dd>
   </div>
-  <div *ngIf="request.getType() === 'ORDER'" class="nhsuk-summary-list__row">
+  <div *ngIf="request.getType() === 'ORDER' && getAddress()" class="nhsuk-summary-list__row">
     <dt class="nhsuk-summary-list__key">Address</dt>
     <dd class="nhsuk-summary-list__value">{{getAddress()}}</dd>
   </div>

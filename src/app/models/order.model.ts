@@ -8,7 +8,7 @@ export class Order extends Request {
   payment?: PaymentDetails;
   details: OrderDetails;
 
-  constructor(details: OrderDetails, items: OrderItem[], payment: PaymentDetails) {
+  constructor(details: OrderDetails, items: OrderItem[], payment?: PaymentDetails) {
     super(details, items);
     this.payment = payment;
   }

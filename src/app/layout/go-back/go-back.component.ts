@@ -12,9 +12,4 @@ export class GoBackComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  goBack() {
-    this.location.back();
-
-  }
 }
