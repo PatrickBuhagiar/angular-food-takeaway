@@ -1,0 +1,17 @@
+<app-go-back *ngIf="step > 0" (click)="step = step - 1"></app-go-back>
+<div [ngSwitch]="step">
+  <div *ngSwitchDefault>
+    <app-booking-info [bookingDetails]="booking.details"></app-booking-info>
+  </div>
+  <div *ngSwitchCase="1">
+    <app-order-selection [orderItems]="booking.items" [menu]="menu"></app-order-selection>
+  </div>
+  <div *ngSwitchCase="2">
+    <app-confirm [request]="booking"></app-confirm>
+  </div>
+  <div *ngSwitchCase="3">
+    <app-end [request]="booking"></app-end>
+  </div>
+</div>
+<button *ngIf="step < maxSteps" class="nhsuk-button" type="button" (click)="step= step + 1">Next</button>
+<button *ngIf="step === maxSteps" class="nhsuk-button" type="button" routerLink="/wizards">Finish</button>
