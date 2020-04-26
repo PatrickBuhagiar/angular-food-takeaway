@@ -3,8 +3,7 @@ import {Wizard} from '../models/wizard.model';
 
 @Component({
   selector: 'app-wizards',
-  templateUrl: './wizards.component.html',
-  styleUrls: ['./wizards.component.scss']
+  templateUrl: './wizards.component.html'
 })
 export class WizardsComponent implements OnInit {
 
